@@ -1,0 +1,1480 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Texas Grillz Abidjan - Grillades, Barbecue & Burgers. Commandez vos plats préférés en ligne.">
+    <title>Texas Grillz Abidjan | Grillades, Barbecue & Burgers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <h1 class="logo">Texas Grillz</h1>
+                <p class="slogan">Abidjan • Grillades & Barbecue</p>
+            </div>
+            <button class="cart-toggle" id="cartToggle" aria-label="Ouvrir le panier">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <!-- Dans votre header, après le bouton panier -->
+            <div class="theme-switch-wrapper">
+                <i class="fas fa-sun theme-icon"></i>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="theme-slider"></span>
+                </label>
+                <i class="fas fa-moon theme-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+            <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li><a href="#contact"><i class="fas fa-map-marker-alt"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2>L'art du barbecue texan à Abidjan</h2>
+                    <p>Fumé lentement, grillé à la perfection, servi avec passion</p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn-primary">Explorer le menu</a>
+                        <a href="#contact" class="btn-secondary">Nous trouver</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+<!-- Menu Section -->
+<section class="menu-section" id="menu">
+    <div class="section-header">
+        <h2 class="section-title">Notre Carte Complète</h2>
+        <p class="section-subtitle">Grillades, Burgers & Spécialités Texanes</p>
+    </div>
+
+    <!-- Promotions & Top des ventes -->
+    <div class="menu-category">
+        <div class="category-header">
+            <i class="fas fa-fire category-icon"></i>
+            <h3 class="category-title">🔥 Promotions & Top des Ventes</h3>
+        </div>
+        <div class="menu-grid">
+            <article class="menu-item" data-id="1" data-name="1/2 Poulet Texan + Accompagnement" data-price="4000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="1/2 Poulet Texan grillé">
+                    <span class="item-badge">Promotion</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>1/2 Poulet Texan + Accompagnement</h4>
+                        <div class="item-price">4 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Poulet mariné et caramélisé barbecue avec sauce, servi avec frites ou attiéké offert. Prix promotionnel (généralement ~5 500 FCFA)</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Incontournable</span>
+                            <span class="tag">Promo</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(1, '1/2 Poulet Texan + Accompagnement', 4000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="2" data-name="Texan Poulet Entier + Accompagnement" data-price="8000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Poulet entier grillé">
+                    <span class="item-badge">Top Vente</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Texan Poulet Entier + Accompagnement</h4>
+                        <div class="item-price">8 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Poulet entier mariné 24h, lentement grillé au barbecue, servi avec accompagnement au choix</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Incontournable</span>
+                            <span class="tag">Famille</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(2, 'Texan Poulet Entier + Accompagnement', 8000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="4" data-name="Ribs + Accompagnement Offert" data-price="12000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ribs barbecue">
+                    <span class="item-badge">Signature</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Ribs + Accompagnement Offert</h4>
+                        <div class="item-price">12 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Côtes de porc fumées lentement, sauce barbecue maison, accompagnement au choix offert</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Incontournable</span>
+                            <span class="tag">Signature</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(4, 'Ribs + Accompagnement Offert', 12000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Menu Viande BBQ -->
+    <div class="menu-category">
+        <div class="category-header">
+            <i class="fas fa-drumstick-bite category-icon"></i>
+            <h3 class="category-title">🥩 Menu Viande BBQ</h3>
+        </div>
+        <div class="menu-grid">
+            <article class="menu-item" data-id="3" data-name="Steak Filet de Bœuf + Accompagnement" data-price="12000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Steak de bœuf">
+                    <span class="item-badge">Premium</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Steak Filet de Bœuf + Accompagnement</h4>
+                        <div class="item-price">12 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Filet de bœuf Angus grillé au charbon de bois, accompagnement au choix, sauce béarnaise</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Premium</span>
+                            <span class="tag">Charbon</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(3, 'Steak Filet de Bœuf + Accompagnement', 12000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="5" data-name="Côtes de Porcs + Accompagnement" data-price="10000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Côtes de porc grillées">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Côtes de Porcs + Accompagnement</h4>
+                        <div class="item-price">10 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Côtes de porc marinées, grillées avec glaçage barbecue, servies avec accompagnement</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">BBQ</span>
+                            <span class="tag">Mariné</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(5, 'Côtes de Porcs + Accompagnement', 10000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Menu Burger -->
+    <div class="menu-category">
+        <div class="category-header">
+            <i class="fas fa-hamburger category-icon"></i>
+            <h3 class="category-title">🍔 Menu Burger</h3>
+        </div>
+        <div class="menu-grid">
+            <article class="menu-item" data-id="6" data-name="Burger Grand Canyon + Frites" data-price="10000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Grand Canyon">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Burger Grand Canyon + Frites</h4>
+                        <div class="item-price">10 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Notre burger signature avec double steak, cheddar, bacon, oignons caramélisés et frites maison</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Signature</span>
+                            <span class="tag">Double</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(6, 'Burger Grand Canyon + Frites', 10000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="7" data-name="Burger Juicy Double + Frites" data-price="10000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Juicy Double">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Burger Juicy Double + Frites</h4>
+                        <div class="item-price">10 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Double viande juteuse, fromage fondu, sauce spéciale, légumes frais et frites croustillantes</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Juteux</span>
+                            <span class="tag">Double</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(7, 'Burger Juicy Double + Frites', 10000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="8" data-name="Burger Crunchy Double + Frites" data-price="10000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Crunchy Double">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Burger Crunchy Double + Frites</h4>
+                        <div class="item-price">10 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Double steak pané croustillant, sauce spéciale, salade, tomate, cornichons et frites</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Croustillant</span>
+                            <span class="tag">Double</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(8, 'Burger Crunchy Double + Frites', 10000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="9" data-name="Burger Juicy Simple + Frites" data-price="6000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Juicy Simple">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Burger Juicy Simple + Frites</h4>
+                        <div class="item-price">6 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Steak juteux, fromage, salade, tomate, oignon rouge et notre sauce maison, avec frites</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Classique</span>
+                            <span class="tag">Juteux</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(9, 'Burger Juicy Simple + Frites', 6000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="10" data-name="Burger Crunch + Frites" data-price="6000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger Crunch">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Burger Crunch + Frites</h4>
+                        <div class="item-price">6 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Steak pané croustillant, salade fraîche, sauce burger, servi avec frites maison</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Croustillant</span>
+                            <span class="tag">Économique</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(10, 'Burger Crunch + Frites', 6000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Menu Brochettes -->
+    <div class="menu-category">
+        <div class="category-header">
+            <i class="fas fa-utensils category-icon"></i>
+            <h3 class="category-title">🍢 Menu Brochettes</h3>
+        </div>
+        <div class="menu-grid">
+            <article class="menu-item" data-id="11" data-name="Brochette Filet de Bœuf" data-price="2000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Brochette de bœuf">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Brochette Filet de Bœuf</h4>
+                        <div class="item-price">2 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Filet de bœuf mariné aux épices, grillé au charbon, servi avec légumes grillés</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Mariné</span>
+                            <span class="tag">Charbon</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(11, 'Brochette Filet de Bœuf', 2000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="12" data-name="Brochette Filet de Poulet" data-price="2000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Brochette de poulet">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Brochette Filet de Poulet</h4>
+                        <div class="item-price">2 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Filet de poulet mariné, grillé avec poivrons et oignons, parfumé aux herbes</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Mariné</span>
+                            <span class="tag">Légumes</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(12, 'Brochette Filet de Poulet', 2000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Menu Saisonnier / Autres Plats -->
+    <div class="menu-category">
+        <div class="category-header">
+            <i class="fas fa-seedling category-icon"></i>
+            <h3 class="category-title">🍽️ Menu Saisonnier / Autres Plats</h3>
+        </div>
+        <div class="menu-grid">
+            <article class="menu-item" data-id="13" data-name="Gambas + Tagliatelles" data-price="19000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gambas avec tagliatelles">
+                    <span class="item-badge">Premium</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Gambas + Tagliatelles</h4>
+                        <div class="item-price">19 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Gambas grillées à l'ail et persil, servies avec tagliatelles fraîches à la crème</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Fruits de mer</span>
+                            <span class="tag">Premium</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(13, 'Gambas + Tagliatelles', 19000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="14" data-name="Gambas + Accompagnement" data-price="18000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gambas grillées">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Gambas + Accompagnement</h4>
+                        <div class="item-price">18 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Gambas géantes grillées au barbecue, servies avec accompagnement au choix</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Fruits de mer</span>
+                            <span class="tag">Grillé</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(14, 'Gambas + Accompagnement', 18000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="15" data-name="Dirty Burger + Frites" data-price="12000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dirty Burger">
+                    <span class="item-badge">Gourmand</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Dirty Burger + Frites</h4>
+                        <div class="item-price">12 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Notre burger le plus gourmand : triple viande, triple fromage, bacon, oignons frits</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Gourmand</span>
+                            <span class="tag">Triple</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(15, 'Dirty Burger + Frites', 12000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="16" data-name="Steak Tagliatelles" data-price="12000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Steak avec tagliatelles">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Steak Tagliatelles</h4>
+                        <div class="item-price">12 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Filet de bœuf grillé, servi avec tagliatelles fraîches à la sauce champignon</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Fusion</span>
+                            <span class="tag">Pâtes</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(16, 'Steak Tagliatelles', 12000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="17" data-name="Frite Fromage Poulet" data-price="10000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Frites fromage poulet">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Frite Fromage Poulet</h4>
+                        <div class="item-price">10 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Frites maison nappées de fromage fondu, morceaux de poulet grillé, bacon</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Comfort Food</span>
+                            <span class="tag">Fromage</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(17, 'Frite Fromage Poulet', 10000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="18" data-name="Frite Fromage Bœuf" data-price="10000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Frites fromage bœuf">
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Frite Fromage Bœuf</h4>
+                        <div class="item-price">10 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Frites croustillantes, sauce fromagère, morceaux de bœuf grillé, oignons frits</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Comfort Food</span>
+                            <span class="tag">Gourmand</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(18, 'Frite Fromage Bœuf', 10000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Mix Grill -->
+    <div class="menu-category">
+        <div class="category-header">
+            <i class="fas fa-utensil-spoon category-icon"></i>
+            <h3 class="category-title">🥩 Mix Grill</h3>
+        </div>
+        <div class="menu-grid">
+            <article class="menu-item" data-id="19" data-name="Mix Grill 1" data-price="35000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mix Grill 1">
+                    <span class="item-badge">Partage</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Mix Grill 1</h4>
+                        <div class="item-price">35 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Plateau bœuf et poulet + attiéké et frites. Parfait pour 2-3 personnes</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Partage</span>
+                            <span class="tag">Famille</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(19, 'Mix Grill 1', 35000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="20" data-name="Mix Grill 2" data-price="50000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mix Grill 2">
+                    <span class="item-badge">Partage</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Mix Grill 2</h4>
+                        <div class="item-price">50 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Bœuf, poulet, porc + 3 accompagnements (attiéké, frites et alloco). Pour 3-4 personnes</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Partage</span>
+                            <span class="tag">Variété</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(20, 'Mix Grill 2', 50000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="menu-item" data-id="21" data-name="Mix Grill 3" data-price="65000">
+                <div class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mix Grill 3">
+                    <span class="item-badge">Premium</span>
+                </div>
+                <div class="menu-item-info">
+                    <div class="item-header">
+                        <h4>Mix Grill 3</h4>
+                        <div class="item-price">65 000 FCFA</div>
+                    </div>
+                    <p class="item-description">Bœuf, poulet, porc et gambas + 4 accompagnements (1 attiéké + 2 frites + 1 alloco). Pour 4-5 personnes</p>
+                    <div class="item-footer">
+                        <div class="item-tags">
+                            <span class="tag">Premium</span>
+                            <span class="tag">Fête</span>
+                        </div>
+                        <button class="btn-add" onclick="addToCart(21, 'Mix Grill 3', 65000)">
+                            <i class="fas fa-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+       <!-- Section FAQ Modernisée -->
+<section class="faq-section" id="faq">
+    <div class="section-header">
+        <h2 class="section-title">Questions Fréquentes</h2>
+        <p class="section-subtitle">Trouvez rapidement les réponses à vos questions</p>
+        <div class="faq-search">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="faqSearch" placeholder="Rechercher une question..." onkeyup="searchFAQ()">
+        </div>
+    </div>
+    
+    <div class="faq-container">
+        <!-- Catégorie 1 : Commandes -->
+        <div class="faq-category">
+            <div class="faq-category-header">
+                <i class="fas fa-shopping-cart category-main-icon"></i>
+                <h3>Commandes & Livraison</h3>
+                <span class="category-count">5 questions</span>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item" data-category="commande">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-question-circle question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Comment commander chez Texas Grillz ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Commande</span>
+                                    <span class="faq-tag">Processus</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><strong>Plusieurs options s'offrent à vous :</strong></p>
+                            <ul class="answer-list">
+                                <li><i class="fas fa-check-circle list-icon"></i> <strong>Via notre site :</strong> Ajoutez vos plats au panier, remplissez le formulaire et commandez via WhatsApp</li>
+                                <li><i class="fas fa-check-circle list-icon"></i> <strong>Via Glovo :</strong> Accédez à l'application Glovo > Restaurants > Texas Grillz</li>
+                                <li><i class="fas fa-check-circle list-icon"></i> <strong>Par téléphone :</strong> Appelez-nous au +225 01 52 99 12 37</li>
+                            </ul>
+                            <div class="answer-note">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Astuce : Commandez tôt pendant les heures de pointe pour une livraison plus rapide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="commande">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-clock question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Quels sont les délais de préparation et de livraison ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Délai</span>
+                                    <span class="faq-tag">Livraison</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="timeline-info">
+                                <div class="timeline-step">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>Préparation</h5>
+                                        <p>15-25 minutes selon la complexité du plat</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-motorcycle"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>Livraison</h5>
+                                        <p>30-45 minutes selon votre localisation à Abidjan</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-flag-checkered"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>Total estimé</h5>
+                                        <p>45-70 minutes du début à la livraison</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="answer-note"><i class="fas fa-info-circle"></i> Le délai exact s'affiche après saisie de votre adresse</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="commande">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-truck question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Combien coûte la livraison ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Frais</span>
+                                    <span class="faq-tag">Livraison</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>Les frais de livraison dépendent de plusieurs facteurs :</p>
+                            <div class="pricing-grid">
+                                <div class="price-card">
+                                    <div class="price-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <h5>Zone de livraison</h5>
+                                    <p>Variable selon la distance</p>
+                                </div>
+                                <div class="price-card">
+                                    <div class="price-icon">
+                                        <i class="fas fa-shopping-basket"></i>
+                                    </div>
+                                    <h5>Montant commande</h5>
+                                    <p>Gratuit au-dessus d'un certain seuil</p>
+                                </div>
+                                <div class="price-card">
+                                    <div class="price-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h5>Heure de commande</h5>
+                                    <p>Tarif normal en heures de pointe</p>
+                                </div>
+                            </div>
+                            <p><strong>Conseil :</strong> Les frais exacts sont affichés avant validation de votre commande</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie 2 : Menu & Produits -->
+        <div class="faq-category">
+            <div class="faq-category-header">
+                <i class="fas fa-utensils category-main-icon"></i>
+                <h3>Menu & Produits</h3>
+                <span class="category-count">4 questions</span>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item" data-category="menu">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-hamburger question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Que puis-je commander chez Texas Grillz ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Menu</span>
+                                    <span class="faq-tag">Produits</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p><strong>Notre carte complète propose :</strong></p>
+                            <div class="menu-categories">
+                                <div class="menu-category-item">
+                                    <i class="fas fa-fire"></i>
+                                    <div>
+                                        <h5>BBQ & Viandes</h5>
+                                        <p>Poulet texan, ribs, steak, côtes de porc</p>
+                                    </div>
+                                </div>
+                                <div class="menu-category-item">
+                                    <i class="fas fa-cheeseburger"></i>
+                                    <div>
+                                        <h5>Burgers Gourmands</h5>
+                                        <p>Grand Canyon, Juicy Double, Crunchy Double</p>
+                                    </div>
+                                </div>
+                                <div class="menu-category-item">
+                                    <i class="fas fa-drumstick-bite"></i>
+                                    <div>
+                                        <h5>Brochettes</h5>
+                                        <p>Filet de bœuf et poulet marinés</p>
+                                    </div>
+                                </div>
+                                <div class="menu-category-item">
+                                    <i class="fas fa-share-alt"></i>
+                                    <div>
+                                        <h5>Mix Grill</h5>
+                                        <p>Assortiments pour partage</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="menu">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-shopping-basket question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Y a-t-il un montant minimum de commande ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Minimum</span>
+                                    <span class="faq-tag">Commande</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h5>Oui, mais flexible</h5>
+                                    <p>Un montant minimum s'applique, mais même si vous ne l'atteignez pas, nous pouvons quand même livrer moyennant des frais supplémentaires.</p>
+                                </div>
+                            </div>
+                            <div class="tip-box">
+                                <i class="fas fa-lightbulb"></i>
+                                <p>Le montant exact est affiché lors de la commande en fonction de votre localisation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie 3 : Service Client -->
+        <div class="faq-category">
+            <div class="faq-category-header">
+                <i class="fas fa-headset category-main-icon"></i>
+                <h3>Service Client</h3>
+                <span class="category-count">3 questions</span>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item" data-category="service">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-user-friends question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Puis-je commander pour quelqu'un d'autre ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Cadeau</span>
+                                    <span class="faq-tag">Autre</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="success-card">
+                                <div class="success-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="success-content">
+                                    <h5>Absolument !</h5>
+                                    <p>Vous pouvez envoyer nos délicieuses grillades à une autre personne. C'est le cadeau parfait pour les amateurs de BBQ !</p>
+                                </div>
+                            </div>
+                            <p><strong>Comment faire :</strong></p>
+                            <ol class="steps-list">
+                                <li>Renseignez l'adresse et les coordonnées du destinataire</li>
+                                <li>Ajoutez une note personnalisée si vous le souhaitez</li>
+                                <li>Nous livrerons avec le sourire et une attention particulière</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="service">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <div class="faq-question-content">
+                            <div class="faq-icon-wrapper">
+                                <i class="fas fa-edit question-icon"></i>
+                            </div>
+                            <div class="faq-text">
+                                <h4>Puis-je modifier ou annuler ma commande ?</h4>
+                                <div class="faq-tags">
+                                    <span class="faq-tag">Modification</span>
+                                    <span class="faq-tag">Annulation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down faq-arrow"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="timing-info">
+                                <div class="timing-item">
+                                    <div class="timing-badge modification">Modification</div>
+                                    <p><i class="fas fa-check-circle"></i> Possible dans les <strong>10 minutes</strong> suivant la commande</p>
+                                    <p><i class="fas fa-phone-alt"></i> Contactez-nous sur WhatsApp</p>
+                                </div>
+                                <div class="timing-item">
+                                    <div class="timing-badge cancellation">Annulation</div>
+                                    <p><i class="fas fa-exclamation-triangle"></i> Contactez-nous <strong>au plus vite</strong></p>
+                                    <p><i class="fas fa-times-circle"></i> Impossible une fois la préparation commencée</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fas fa-comments"></i>
+                                <div>
+                                    <h5>Contact rapide</h5>
+                                    <p>WhatsApp : +225 01 52 99 12 37</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message d'aide -->
+        <div class="faq-help">
+            <div class="faq-help-content">
+                <i class="fas fa-comments help-icon"></i>
+                <div>
+                    <h4>Vous ne trouvez pas votre réponse ?</h4>
+                    <p>Contactez notre équipe directement sur WhatsApp pour une assistance personnalisée</p>
+                </div>
+                <a href="https://wa.me/2250152991237" class="btn-help" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Nous contacter
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Contact Section Modernisé -->
+<section class="contact-section" id="contact">
+    <div class="section-header">
+        <h2 class="section-title">Nous Trouver</h2>
+        <p class="section-subtitle">Venez découvrir notre cuisine texane à Abidjan</p>
+    </div>
+    
+    <div class="contact-container">
+        <div class="contact-category">
+            <div class="contact-category-header">
+                <i class="fas fa-map-marker-alt category-main-icon"></i>
+                <h3>📍 Informations & Localisation</h3>
+                <span class="category-count">3 points</span>
+            </div>
+            
+            <div class="contact-accordion">
+                <div class="contact-item active">
+                    <div class="contact-question" onclick="toggleContact(this)">
+                        <div class="contact-question-content">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-location-dot question-icon"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Adresse & Horaires d'ouverture</h4>
+                                <div class="contact-tags">
+                                    <span class="contact-tag">Localisation</span>
+                                    <span class="contact-tag">Horaires</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down contact-arrow"></i>
+                    </div>
+                    <div class="contact-answer">
+                        <div class="answer-content">
+                            <div class="info-grid">
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="info-details">
+                                        <h5>Adresse</h5>
+                                        <p><strong>Texas Grillz Abidjan</strong><br>
+                                        Plateau, Abidjan<br>
+                                        Côte d'Ivoire</p>
+                                        <small class="address-note">
+                                            <i class="fas fa-info-circle"></i> Livraison disponible dans toute la ville
+                                        </small>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-card">
+                                    <div class="info-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="info-details">
+                                        <h5>Horaires</h5>
+                                        <p><strong>Lundi - Dimanche</strong><br>
+                                        11h00 - 23h00</p>
+                                        <p><strong>Service non-stop</strong><br>
+                                        Dernière commande à 22h30</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timing-note">
+                                <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <h6>✈️ Commandes spéciales & Événements</h6>
+                                    <p>Nous acceptons les commandes pour événements privés, mariages et réceptions. Contactez-nous 48h à l'avance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-question" onclick="toggleContact(this)">
+                        <div class="contact-question-content">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-phone question-icon"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Contact & Réservations</h4>
+                                <div class="contact-tags">
+                                    <span class="contact-tag">Téléphone</span>
+                                    <span class="contact-tag">Réservation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down contact-arrow"></i>
+                    </div>
+                    <div class="contact-answer">
+                        <div class="answer-content">
+                            <div class="contact-methods">
+                                <div class="method-card whatsapp">
+                                    <div class="method-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h5>Commandes WhatsApp</h5>
+                                        <p><strong>+225 01 52 99 12 37</strong></p>
+                                        <small>Réponse rapide garantie dans les 5 minutes</small>
+                                        <a href="https://wa.me/2250152991237" class="method-btn" target="_blank">
+                                            <i class="fab fa-whatsapp"></i> Commander maintenant
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card phone">
+                                    <div class="method-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h5>Appel téléphonique</h5>
+                                        <p><strong>+225 01 52 99 12 37</strong></p>
+                                        <small>Pour les réservations et questions</small>
+                                        <a href="tel:+2250152991237" class="method-btn secondary">
+                                            <i class="fas fa-phone"></i> Appeler maintenant
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="response-time">
+                                <div class="time-indicator">
+                                    <div class="time-dot"></div>
+                                    <div class="time-line"></div>
+                                    <div class="time-dot active"></div>
+                                    <div class="time-line"></div>
+                                    <div class="time-dot"></div>
+                                </div>
+                                <div class="time-labels">
+                                    <span>Contact</span>
+                                    <span>Réponse <br><strong>5min</strong></span>
+                                    <span>Livraison <br><strong>45min</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-question" onclick="toggleContact(this)">
+                        <div class="contact-question-content">
+                            <div class="contact-icon-wrapper">
+                                <i class="fas fa-truck-fast question-icon"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Zones de Livraison & Frais</h4>
+                                <div class="contact-tags">
+                                    <span class="contact-tag">Livraison</span>
+                                    <span class="contact-tag">Frais</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down contact-arrow"></i>
+                    </div>
+                    <div class="contact-answer">
+                        <div class="answer-content">
+                            <div class="delivery-zones">
+                                <div class="zone-card">
+                                    <div class="zone-header">
+                                        <i class="fas fa-star"></i>
+                                        <h5>Zone 1 : Plateau & Cocody</h5>
+                                    </div>
+                                    <div class="zone-details">
+                                        <p><strong>Livraison :</strong> 20-30 minutes</p>
+                                        <p><strong>Frais :</strong> Gratuit dès 10 000 FCFA</p>
+                                        <p><strong>Minimum :</strong> 5 000 FCFA</p>
+                                    </div>
+                                    <div class="zone-tag premium">Recommandé</div>
+                                </div>
+                                
+                                <div class="zone-card">
+                                    <div class="zone-header">
+                                        <i class="fas fa-check-circle"></i>
+                                        <h5>Zone 2 : Marcory & Treichville</h5>
+                                    </div>
+                                    <div class="zone-details">
+                                        <p><strong>Livraison :</strong> 30-45 minutes</p>
+                                        <p><strong>Frais :</strong> 1 000 FCFA</p>
+                                        <p><strong>Minimum :</strong> 6 000 FCFA</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="zone-card">
+                                    <div class="zone-header">
+                                        <i class="fas fa-clock"></i>
+                                        <h5>Zone 3 : Autres quartiers</h5>
+                                    </div>
+                                    <div class="zone-details">
+                                        <p><strong>Livraison :</strong> 45-60 minutes</p>
+                                        <p><strong>Frais :</strong> Variable</p>
+                                        <p><strong>Contactez-nous :</strong> pour vérifier</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="delivery-note">
+                                <i class="fas fa-motorcycle"></i>
+                                <div>
+                                    <h6>🚀 Livraison express disponible</h6>
+                                    <p>Pour une livraison en moins de 30 minutes, sélectionnez l'option "Express" lors de votre commande.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carte interactive -->
+        <div class="contact-map-section">
+            <div class="map-header">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>🎯 Notre Position sur la Carte</h3>
+            </div>
+            <div class="map-placeholder interactive">
+                <div class="map-overlay">
+                    <div class="map-pin">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div class="map-info">
+                        <h4>Texas Grillz Abidjan</h4>
+                        <p>Plateau, Abidjan</p>
+                        <div class="map-actions">
+                            <button class="map-btn" onclick="openGoogleMaps()">
+                                <i class="fas fa-directions"></i> Itinéraire
+                            </button>
+                            <button class="map-btn secondary" onclick="copyAddress()">
+                                <i class="fas fa-copy"></i> Copier l'adresse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-tip">
+                <i class="fas fa-lightbulb"></i>
+                <p>Cliquez sur "Itinéraire" pour obtenir les directions depuis votre position</p>
+            </div>
+        </div>
+        
+        <!-- Section d'assistance -->
+        <div class="contact-help">
+            <div class="contact-help-content">
+                <i class="fas fa-headset help-icon"></i>
+                <div>
+                    <h4>Besoin d'aide pour trouver notre restaurant ?</h4>
+                    <p>Notre équipe est disponible pour vous guider. Appelez-nous ou envoyez un message sur WhatsApp.</p>
+                </div>
+                <div class="help-buttons">
+                    <a href="tel:+2250152991237" class="btn-help phone">
+                        <i class="fas fa-phone-alt"></i> Appeler
+                    </a>
+                    <a href="https://wa.me/2250152991237" class="btn-help whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Votre Commande</h2>
+            <button class="cart-close" id="cartClose" aria-label="Fermer le panier">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty-state">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Votre panier est vide</p>
+                <small>Ajoutez des plats pour commencer</small>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">0 FCFA</span>
+                </div>
+                <div class="delivery-info">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Livraison incluse dans Abidjan</span>
+                </div>
+            </div>
+            
+            <div class="cart-form" id="cartForm">
+                <h3>Informations de livraison</h3>
+                <div class="form-group">
+                    <label for="customerName">
+                        <i class="fas fa-user"></i> Nom complet
+                    </label>
+                    <input type="text" id="customerName" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">
+                        <i class="fas fa-phone"></i> Téléphone
+                    </label>
+                    <input type="tel" id="customerPhone" placeholder="07 01 02 03 04" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">
+                        <i class="fas fa-home"></i> Adresse
+                    </label>
+                    <textarea id="customerAddress" placeholder="Votre adresse complète à Abidjan" rows="2" required></textarea>
+                </div>
+            </div>
+            
+            <button class="btn-whatsapp" id="btnWhatsapp" onclick="sendToWhatsApp()">
+                <i class="fab fa-whatsapp"></i>
+                <span>Commander sur WhatsApp</span>
+            </button>
+            
+            <p class="cart-note">
+                <i class="fas fa-shield-alt"></i>
+                Paiement à la livraison • 45-60 min
+            </p>
+        </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span id="toastMessage">Article ajouté au panier</span>
+    </div>
+
+   <!-- Footer Modernisé -->
+<footer class="footer-section" id="footer">
+    <div class="footer-container">
+        <div class="footer-category">
+            <div class="footer-category-header">
+                <i class="fas fa-info-circle category-main-icon"></i>
+                <h3>ℹ️ Informations & Liens Utiles</h3>
+                <span class="category-count">4 sections</span>
+            </div>
+            
+            <div class="footer-grid">
+                <!-- À propos -->
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <div class="footer-icon-wrapper">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>À propos de Texas Grillz</h4>
+                    </div>
+                    <div class="footer-item-content">
+                        <p class="brand-description">
+                            <strong>Depuis 2024</strong>, nous apportons l'authentique saveur du barbecue texan à Abidjan. 
+                            Notre passion : des viandes fumées lentement, des sauces maison et un service exceptionnel.
+                        </p>
+                        <div class="brand-values">
+                            <div class="value-tag">
+                                <i class="fas fa-check"></i>
+                                <span>Viandes premium</span>
+                            </div>
+                            <div class="value-tag">
+                                <i class="fas fa-check"></i>
+                                <span>Sauces maison</span>
+                            </div>
+                            <div class="value-tag">
+                                <i class="fas fa-check"></i>
+                                <span>Service rapide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation rapide -->
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <div class="footer-icon-wrapper">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h4>Navigation Rapide</h4>
+                    </div>
+                    <div class="footer-item-content">
+                        <div class="quick-links">
+                            <a href="#menu" class="quick-link">
+                                <i class="fas fa-utensils"></i>
+                                <span>Menu complet</span>
+                            </a>
+                            <a href="#faq" class="quick-link">
+                                <i class="fas fa-question-circle"></i>
+                                <span>Questions fréquentes</span>
+                            </a>
+                            <a href="#contact" class="quick-link">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nous trouver</span>
+                            </a>
+                            <a href="#cartSidebar" class="quick-link" onclick="openCart()">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Votre panier</span>
+                            </a>
+                        </div>
+                        <div class="scroll-top">
+                            <button class="scroll-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                                <i class="fas fa-arrow-up"></i>
+                                Retour en haut
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nous contacter -->
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <div class="footer-icon-wrapper">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <h4>Nous Contacter</h4>
+                    </div>
+                    <div class="footer-item-content">
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <strong>Commandes</strong>
+                                    <p>+225 01 52 99 12 37</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Réservations</strong>
+                                    <p>+225 01 52 99 12 37</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Horaires</strong>
+                                    <p>11h - 23h • 7j/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div class="footer-item">
+                    <div class="footer-item-header">
+                        <div class="footer-icon-wrapper">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h4>Suivez-nous</h4>
+                    </div>
+                    <div class="footer-item-content">
+                        <p class="social-description">
+                            Découvrez nos dernières créations, promotions et événements spéciaux.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link instagram" aria-label="Instagram" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link facebook" aria-label="Facebook" title="Facebook">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://wa.me/2250152991237" class="social-link whatsapp" aria-label="WhatsApp" title="WhatsApp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                        <div class="newsletter">
+                            <p><strong>📧 Newsletter</strong></p>
+                            <small>Soyez les premiers informés de nos promotions</small>
+                            <div class="newsletter-input">
+                                <input type="email" placeholder="Votre email" id="newsletterEmail">
+                                <button class="newsletter-btn" onclick="subscribeNewsletter()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Informations légales -->
+        <div class="footer-legal">
+            <div class="legal-content">
+                <div class="copyright">
+                    <i class="fas fa-copyright"></i>
+                    <span>2024 Texas Grillz Abidjan. Tous droits réservés.</span>
+                </div>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Mentions légales</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="legal-link">Politique de confidentialité</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="legal-link">Conditions d'utilisation</a>
+                </div>
+                <div class="made-with">
+                    <i class="fas fa-heart"></i>
+                    <span>Créé avec passion pour les amateurs de BBQ à Abidjan</span>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-title">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Paiements acceptés</span>
+                </div>
+                <div class="payment-icons">
+                    <i class="fas fa-money-bill-wave" title="Espèces"></i>
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fas fa-mobile-alt" title="Mobile Money"></i>
+                    <i class="fas fa-qrcode" title="QR Code"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
